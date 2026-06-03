@@ -1,0 +1,48 @@
+*{box-sizing:border-box}:root{--gold:#d6ad5b;--gold2:#f3d48a;--panel:rgba(8,10,14,.74);--text:#f4e3bd;--muted:#c6ae79;--red:#c94e45;--blue:#3d88d4;--purple:#8b62d1}html,body{margin:0;width:100%;height:100%;background:#050608;font-family:"Noto Serif SC","Songti SC","Microsoft YaHei",serif;color:var(--text);overflow:hidden}.showcase{position:relative;width:100vw;height:100vh;min-width:1100px;min-height:620px;overflow:hidden;background:#050608}.scene-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82) contrast(1.08) saturate(1.05);transform:scale(1.01)}.showcase:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.44),rgba(0,0,0,.12) 34%,rgba(0,0,0,.78)),radial-gradient(circle at center,transparent 35%,rgba(0,0,0,.36))}.top-title{position:absolute;z-index:3;top:2.6vh;left:50%;transform:translateX(-50%);width:66vw;text-align:center;text-shadow:0 0 16px rgba(0,0,0,.9)}.eyebrow{letter-spacing:.18em;color:var(--muted);font-size:13px;text-transform:uppercase}.top-title h1{margin:6px 0 4px;color:var(--gold2);font-size:clamp(28px,3.1vw,52px);font-weight:600;letter-spacing:.1em}.top-title p{margin:0;color:#dfc994;font-size:clamp(13px,1.2vw,20px)}.left-menu,.status-panel,.bottom-hint,.flow-strip{position:absolute;z-index:4;background:var(--panel);border:1px solid rgba(214,173,91,.55);box-shadow:0 0 30px rgba(0,0,0,.45),inset 0 0 20px rgba(214,173,91,.04);backdrop-filter:blur(6px)}.left-menu{left:2vw;top:15vh;width:min(25vw,385px);padding:18px;border-radius:20px}.left-menu h2,.status-panel h2{margin:0 0 14px;font-size:20px;color:var(--gold2);letter-spacing:.06em}.menu-item{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:10px;width:100%;min-height:62px;margin:10px 0;padding:10px 14px;border:1px solid rgba(214,173,91,.42);border-radius:12px;background:rgba(12,14,18,.66);color:var(--text);font-family:inherit;cursor:pointer;text-align:left;transition:.18s}.menu-item span{grid-row:1/3;display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;color:var(--gold2)}.menu-item b{font-size:15px;font-weight:700}.menu-item small{grid-column:2;color:var(--muted);font-size:12px}.menu-item:hover{transform:translateX(8px);background:rgba(214,173,91,.16);box-shadow:0 0 20px rgba(214,173,91,.24)}.hotspot{position:absolute;z-index:5;border:0;background:transparent;cursor:pointer;padding:0}.hotspot .pulse{position:absolute;left:50%;top:50%;width:38px;height:38px;transform:translate(-50%,-50%);border:2px solid var(--gold2);border-radius:50%;box-shadow:0 0 20px rgba(214,173,91,.72);animation:pulse 1.6s infinite ease-out}.hotspot .pulse.rune{width:52px;height:52px;border-style:double}.hotspot:before{content:"";position:absolute;left:50%;top:50%;width:70px;height:70px;transform:translate(-50%,-50%) scale(.86);border:1px solid rgba(214,173,91,.45);border-radius:50%;opacity:0;transition:.18s}.hotspot:hover:before{opacity:1;transform:translate(-50%,-50%) scale(1.1)}.tooltip{position:absolute;left:50%;top:calc(50% - 78px);transform:translateX(-50%);min-width:190px;padding:10px 14px;background:rgba(6,8,12,.86);border:1px solid var(--gold);border-radius:10px;color:var(--text);font-size:14px;opacity:0;pointer-events:none;transition:.18s;white-space:nowrap}.hotspot:hover .tooltip{opacity:1;transform:translateX(-50%) translateY(-6px)}.player{left:24vw;top:41vh;width:17vw;height:40vh}.npc{left:60vw;top:29vh;width:13vw;height:44vh}.lightning{left:70vw;top:7vh;width:25vw;height:22vh}.oracle{left:45vw;top:70vh;width:13vw;height:10vh}.head{left:25.5vw;top:34vh;width:8vw;height:13vh}.staff{left:71vw;top:31vh;width:7vw;height:43vh}.status-panel{right:2vw;bottom:4vh;width:min(35vw,520px);padding:18px 20px;border-radius:20px}.bar-row{display:grid;grid-template-columns:28px 90px 1fr 44px;align-items:center;gap:10px;margin:10px 0;font-size:14px}.icon{width:22px;height:22px;display:inline-block;border:1px solid var(--gold);border-radius:50%;box-shadow:0 0 10px rgba(214,173,91,.22)}.icon.eye{background:radial-gradient(circle,var(--blue) 35%,transparent 38%)}.icon.fate{background:conic-gradient(from 10deg,var(--red),var(--gold),var(--red))}.icon.shield{background:linear-gradient(135deg,var(--purple),transparent)}.icon.will{background:linear-gradient(135deg,var(--blue),transparent)}.bar{height:8px;background:rgba(255,255,255,.13);border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#c8892b,#ffdc86)}.bar.red i{background:linear-gradient(90deg,#8a1f25,#ff695c)}.bar.purple i{background:linear-gradient(90deg,#5530a5,#a983ff)}.bar.blue i{background:linear-gradient(90deg,#1f5b99,#65b8ff)}.bottom-hint{left:2vw;bottom:4vh;width:min(58vw,760px);padding:16px 18px;border-radius:18px}.bottom-hint span{color:var(--gold2);font-size:18px;font-weight:700}.bottom-hint p{margin:6px 0 0;color:#e8d6a8}.flow-strip{left:50%;bottom:2vh;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;font-size:13px;color:#e8d6a8}.flow-strip i{width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}@keyframes pulse{0%{transform:translate(-50%,-50%) scale(.72);opacity:.85}70%{transform:translate(-50%,-50%) scale(1.4);opacity:.18}100%{transform:translate(-50%,-50%) scale(1.55);opacity:0}}.modal{position:fixed;z-index:30;inset:0;display:none}.modal.active{display:block}.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}.modal-card{position:absolute;left:50%;top:50%;width:min(86vw,1120px);max-height:90vh;transform:translate(-50%,-50%);padding:22px;border:1px solid rgba(214,173,91,.65);border-radius:22px;background:rgba(8,10,14,.96);box-shadow:0 0 60px rgba(0,0,0,.72),0 0 42px rgba(214,173,91,.16);animation:modalIn .22s ease-out}@keyframes modalIn{from{opacity:0;transform:translate(-50%,-48%) scale(.97)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}.close-btn{position:absolute;right:18px;top:14px;width:42px;height:42px;border:1px solid rgba(214,173,91,.5);border-radius:50%;background:rgba(214,173,91,.12);color:var(--gold2);font-size:28px;cursor:pointer}.modal-header span{color:var(--gold);text-transform:uppercase;letter-spacing:.16em;font-size:12px}.modal-header h2{margin:8px 0 6px;color:var(--gold2);font-size:30px}.modal-header p{margin:0 52px 16px 0;color:#dfcfaa;line-height:1.6}#moduleVideo{width:100%;max-height:58vh;background:#000;border:1px solid rgba(214,173,91,.35);border-radius:14px}.modal-footer{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-top:16px}.ghost-btn{border:1px solid var(--gold);background:rgba(214,173,91,.1);color:var(--text);border-radius:10px;padding:10px 18px;cursor:pointer;font-family:inherit}#paperPoint{margin:0;color:var(--muted);font-size:14px}@media(max-width:900px){body{overflow:auto}.showcase{min-width:100vw;min-height:100vh}.left-menu{width:92vw;left:4vw;top:14vh;display:grid;grid-template-columns:1fr 1fr;gap:8px}.left-menu h2{grid-column:1/3}.menu-item{font-size:13px;min-height:48px;margin:0}.status-panel,.bottom-hint,.flow-strip{display:none}.hotspot{display:none}.modal-card{width:94vw}}
+
+
+/* Final layout overrides: remove large navigation panel, use hotspot detail tooltips instead */
+.left-menu {
+  display: none !important;
+}
+
+.tooltip {
+  min-width: 240px !important;
+  padding: 13px 16px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+  background: rgba(6, 8, 12, 0.92) !important;
+  box-shadow: 0 0 24px rgba(214,173,91,.24) !important;
+}
+
+.tooltip b {
+  display: block;
+  color: var(--gold2);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.tooltip em {
+  display: block;
+  color: #e8d6a8;
+  font-size: 13px;
+  font-style: normal;
+}
+
+/* Adjust brain/head hotspot: move slightly left and upward to align with protagonist head */
+.head {
+  left: 24.2vw !important;
+  top: 31.2vh !important;
+  width: 8.5vw !important;
+  height: 12.5vh !important;
+}
+
+/* Keep a cleaner presentation now that the side navigation is removed */
+.top-title {
+  top: 3vh !important;
+}
+
+.bottom-hint {
+  width: min(50vw, 680px) !important;
+}
+

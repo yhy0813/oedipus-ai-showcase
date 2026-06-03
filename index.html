@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>《俄狄浦斯王》AI剧情交互系统｜展示界面</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="showcase">
+    <img class="scene-bg" src="assets/background.png" alt="展示背景" />
+
+    <header class="top-title">
+      <div class="eyebrow">AI Narrative Interaction Demo</div>
+      <h1>《俄狄浦斯王》AI剧情交互系统</h1>
+      <p>点击场景对象，查看对应功能演示</p>
+    </header>
+    <button class="hotspot player" data-module="explore" aria-label="点击俄狄浦斯">
+      <span class="pulse"></span><span class="tooltip">点击俄狄浦斯<br><b>01 3D探索 → 交互触发</b><em>角色移动与UI切换</em></span>
+    </button>
+
+    <button class="hotspot npc" data-module="input" aria-label="点击提瑞西阿斯">
+      <span class="pulse"></span><span class="tooltip">点击提瑞西阿斯<br><b>02 自由输入 → AI解析</b><em>自然语言转译</em></span>
+    </button>
+
+    <button class="hotspot lightning" data-module="parameter" aria-label="点击背景雷电">
+      <span class="pulse"></span><span class="tooltip">点击背景雷电<br><b>03 参数联动 → 场景反馈</b><em>环境与状态变化</em></span>
+    </button>
+
+    <button class="hotspot oracle" data-module="oracle" aria-label="点击地面神谕符文">
+      <span class="pulse rune"></span><span class="tooltip">点击地面符文<br><b>04 神谕符文 → 剧情状态机</b><em>节点推进与约束</em></span>
+    </button>
+
+    <button class="hotspot head" data-module="memory" aria-label="点击人物头部唤起记忆">
+      <span class="pulse"></span><span class="tooltip">点击人物头部<br><b>05 记忆回溯 → 连续回应</b><em>神经网络记忆</em></span>
+    </button>
+
+    <button class="hotspot staff" data-module="battle" aria-label="点击权杖">
+      <span class="pulse"></span><span class="tooltip">点击权杖<br><b>06 真相交锋 → 语言战斗</b><em>输入转译为动作</em></span>
+    </button>
+
+    <section class="status-panel">
+      <h2>当前状态预览</h2>
+      <div class="bar-row"><span class="icon eye"></span><label>真相揭示度</label><div class="bar"><i style="width:42%"></i></div><b>42%</b></div>
+      <div class="bar-row"><span class="icon fate"></span><label>命运压力</label><div class="bar red"><i style="width:67%"></i></div><b>67%</b></div>
+      <div class="bar-row"><span class="icon shield"></span><label>真相屏障</label><div class="bar purple"><i style="width:58%"></i></div><b>58%</b></div>
+      <div class="bar-row"><span class="icon will"></span><label>俄狄浦斯意志</label><div class="bar blue"><i style="width:82%"></i></div><b>82%</b></div>
+    </section>
+
+    <footer class="bottom-hint">
+      <span>操作提示</span>
+      <p>将鼠标悬停在发光热点上可查看模块说明，点击后弹出对应演示视频。</p>
+    </footer>
+
+    <div class="flow-strip">
+      <span>角色移动</span><i></i><span>自然输入</span><i></i><span>参数反馈</span><i></i><span>神谕状态机</span><i></i><span>记忆回溯</span><i></i><span>真相交锋</span>
+    </div>
+  </main>
+
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <article class="modal-card">
+      <button class="close-btn" data-close="true" aria-label="关闭视频">×</button>
+      <div class="modal-header">
+        <span id="moduleTag">Module</span>
+        <h2 id="moduleTitle">功能演示</h2>
+        <p id="moduleDesc"></p>
+      </div>
+      <video id="moduleVideo" controls playsinline preload="metadata"></video>
+      <div class="modal-footer">
+        <button class="ghost-btn" data-close="true">返回主界面</button>
+        <p id="paperPoint"></p>
+      </div>
+    </article>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
